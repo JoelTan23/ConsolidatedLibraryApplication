@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FAQs">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/defaultbackground"
+            android:orientation="vertical"
+            android:paddingTop="50dp"
+            android:paddingBottom="100dp">
+
+            <!-- Scrollable Content -->
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners"
+                android:paddingHorizontal="33dp"
+                android:paddingTop="51dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/faqContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+
+                        android:orientation="vertical"
+                        android:paddingHorizontal="20dp">
+
+                        <!-- FAQ Title -->
+                        <TextView
+                            android:id="@+id/faqTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="Frequently Asked Questions"
+                            android:textColor="#0D1B2A"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <!-- FAQ Details -->
+
+                        <TextView
+                            android:id="@+id/faqDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="\n\n How do I make an ad hoc booking?\n\n - SP Staff and Students can log in to the Library Room Booking app and scan the QR code affixed at the facility, provided the facility is available at the time of booking.\n\n - SIT Staff and Students can log in to Library Room Booking from a web browser to book the facility, provided the facility is available at the time of booking.\n\n\n What browsers are supported for the Library Room Booking Application?\n\n - The following latest 2 versions of browsers are supported: Google Chrome, Safari, and Microsoft Edge with JavaScript enabled.\n\n"
+                            android:textColor="#0D1B2A"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/roomAvailabilityText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="All rooms are only available from 9am to 5pm"
+                            android:textColor="#0D1B2A"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/contactus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Whom to contact for feedback/help?\n\n For inquiries, please email to library@sp.edu.sg."
+                            android:textColor="#2196F3"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/calendarbackground"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

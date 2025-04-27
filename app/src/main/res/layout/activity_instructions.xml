@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Instructions">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/defaultbackground"
+            android:orientation="vertical"
+            android:paddingTop="50dp"
+            android:paddingBottom="100dp">
+
+            <!-- Scrollable Content -->
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners"
+                android:paddingHorizontal="33dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- Booking Instructions Section -->
+                    <LinearLayout
+                        android:id="@+id/bookingInstructionsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+                        android:paddingVertical="30dp"
+                        android:paddingStart="26dp">
+
+                        <TextView
+                            android:id="@+id/bookingInstructionsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="22dp"
+                            android:text="Booking Instructions"
+                            android:textColor="#0D1B2A"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bookingInstructionsDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Input the Type of Room that you want to book. You can select the room type from the drop-down.\n\n - Learn more about each room from the “Room Information” button.\n\n - Select the date you wish to book.\n\n - You can book up to 2 weeks in advance.\n\n - Check the timings the room is available during the date selected. Press the edit button if you wish to return to the previous page.\n\n - Input the timing you wish to book the room from.\n"
+                            android:textColor="#0D1B2A"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/roomAvailabilityText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="16dp"
+                            android:text="All rooms are only available from 9am to 5pm."
+                            android:textColor="#0D1B2A"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/WebViewButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="Click here for more information!"
+                            android:textColor="#2196F3"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+
+                    <!-- Divider -->
+
+                    <!-- Room Availability Section -->
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/calendarbackground"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

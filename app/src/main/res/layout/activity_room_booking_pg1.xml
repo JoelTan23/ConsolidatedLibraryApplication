@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="horizontal|vertical"
+    android:fadingEdgeLength="@dimen/cardview_default_radius"
+    tools:context=".RoomBookingPg1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <!-- Scrollable Content -->
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/defaultbackground"
+                android:paddingTop="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title Section -->
+                    <TextView
+                        android:id="@+id/libraryTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:text="Library Booking System"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp" />
+
+                    <!-- Horizontal Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#778DA9" />
+
+                    <!-- Booking Instructions and FAQs Section -->
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/bookingInstructions"
+                                    android:layout_width="158dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="16dp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="15dp">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/instructionsText"
+                                        android:layout_width="400px"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/defaultbutton"
+                                        android:fadingEdge="horizontal"
+                                        android:text="Booking Instructions"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/faqsSection"
+                                    android:layout_width="158dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="5dp">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/faqsText"
+                                        android:layout_width="400px"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/defaultbutton"
+                                        android:text="FAQs"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/roomInfoSection"
+                                    android:layout_width="158dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="16dp"
+
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="5dp">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/roomInfoText"
+                                        android:layout_width="400px"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/defaultbutton"
+                                        android:text="Room Info"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/mapSection"
+                                    android:layout_width="158dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="15dp">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/mapText"
+                                        android:layout_width="400px"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/defaultbutton"
+                                        android:text="Library Map"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </TableRow>
+                    </TableLayout>
+
+                    <!-- Room Info and Map Section -->
+
+                    <!-- Horizontal Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="#778DA9" />
+
+                    <!-- Input Fields Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/calendarbackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/inputIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/baseline_edit_calendar_24" />
+
+                        <Button
+                            android:id="@+id/next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonbackground"
+                            android:text="Next"
+                            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <CalendarView
+                            android:id="@+id/calendarView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/calendarbackground" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/calendarbackground"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

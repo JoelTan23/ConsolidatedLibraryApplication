@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LibraryMap">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <!-- Scrollable Content -->
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/defaultbackground"
+                android:paddingHorizontal="33dp"
+                android:paddingTop="51dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Library Map Section -->
+                    <LinearLayout
+                        android:id="@+id/libraryMapSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/calendarbackground"
+                        android:orientation="vertical"
+                        android:paddingTop="30dp"
+                        android:paddingBottom="16dp">
+
+                        <TextView
+                            android:id="@+id/libraryMapTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="Library Map\n"
+                            android:textColor="#0D1B2A"
+                            android:textSize="22sp" />
+
+                        <!-- Fix ImageView Issues -->
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/mapImage1"
+                            android:layout_width="match_parent"
+                            android:layout_height="305dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:scaleType="fitXY"
+                            android:contentDescription="Library Map 1"
+                            android:src="@drawable/screenshot_2024_12_29_164517" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/mapImage2"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginHorizontal="8dp"
+                            android:scaleType="fitXY"
+                            android:contentDescription="Library Map 2"
+                            android:src="@drawable/screenshot_2024_12_29_164559" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="#CAC4D0" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/calendarbackground"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

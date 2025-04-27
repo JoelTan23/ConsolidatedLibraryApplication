@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoomInformation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/defaultbackground"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:paddingBottom="100dp">
+
+        <!-- Scrollable Content -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="33dp"
+            android:paddingTop="51dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/faqContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp">
+
+                    <!-- FAQ Title -->
+                    <TextView
+                        android:id="@+id/faqTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Frequently Asked Questions"
+                        android:textColor="#0D1B2A"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <!-- FAQ Details -->
+
+                    <TextView
+                        android:id="@+id/faqDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pods\nUsed for studying and discussions in groups.\n\nStudios\nUsed for recording videos or asynchronous lectures.\n\nPhoto Studio\nLocated at the Photo Studio can be used by students &amp; staff for taking photos in a cyclorama setting for their portfolio or projects. Set-up &amp; equipment: Canon camera EOS750D, tripod, strobe light, LED panels, reflector &amp; PC with Adobe Suite software.\nUser can book a maximum of 2 hours per day, 14 days in advance.\n\nRecording Studio 1\nRecording Studio 1 can be used by staff for recording asynchronous lectures. Please bring your own notebook.\nSet-up &amp; equipment: 1) Logitech HD stream webcam C922, Saramonic transmitter with clip-on microphone &amp; receiver Blink500 Pro, recharge cable; 2) 32-inch monitor; 3) white boards, chart boards, green backdrop.\n\nRecording Studio 2\nRecording Studio 2 can be used by students &amp; staff for video streaming. Set-up &amp; equipment: 12-inch bi-colour LED ring light, 2m x 1.5m green backdrop screen.\nUser can book a maximum of 2 hours per day, 14 days in advance.\n\nMeeting Rooms\nUsed for standard meetings among groups."
+                        android:textColor="#0D1B2A"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/roomAvailabilityText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="All rooms are only available from 9am to 5pm"
+                        android:textColor="#0D1B2A"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/calendarbackground"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
