@@ -7,10 +7,6 @@
 <img width="424" height="843" alt="Screenshot 2025-04-27 234208" src="https://github.com/user-attachments/assets/005742fd-5acc-40e1-be72-61a9e456ddaa" />
 
 --
-# Bookings Page
-<img width="371" height="811" alt="Screenshot 2025-01-01 224100" src="https://github.com/user-attachments/assets/196b9fc2-9d74-4295-9514-c385f9fe0b53" />
-
---
 # Calendar Page
 <img width="386" height="838" alt="Screenshot 2025-01-01 223744" src="https://github.com/user-attachments/assets/c60c8802-f5e2-4105-90d1-4dff1b64c54e" />
 
